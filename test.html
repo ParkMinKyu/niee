@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="//airport.kr/css/ko/common_air.css">
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="//airport.kr/js/ko/common_air.js?dummy=1"></script>
+<script type="text/javascript" src="niee.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('li').niee({
+		autoLoad : true,
+		time : 2000,
+		before : function(obj){
+			console.log($(obj));
+			$(obj).eq(0).data('start', '2016-01-14 23:04');
+		},
+		after : function(obj){
+			$(obj).removeClass('on');
+			$(obj).eq(0).addClass('on');
+		},
+		change : function(beforeObj, afterObj){
+			console.log($(beforeObj));
+			console.log($(afterObj));
+		}
+	});
+});
+</script>
+</head>
+<body>
+	<div class="banner">
+		<div class="banner_img">
+			<ul>
+				<li class="on" style="display: list-item;">
+					<button type="button">1번배너</button>
+					<p>
+						<img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21629&amp;ATCH_SN=1"
+							width="258" height="96"
+							alt="나의 행복, 대한민국. 여기는 나의 쉼표, 나의 미래, 우리 행복이 있는곳.">
+					</p>
+				</li>
+				<li style="display: list-item;" data-start="2016-01-15">
+					<button type="button">2번배너</button>
+					<p>
+						<a href="#"
+							onclick="window.open('http://www.airport.kr/pa/ko/d/smart_ia.jsp','21599', 'scrollbars=no,toolbar=no,location=no,resizable=no,status=no,menubar=no,resizable=no,width=900,height=650,top=100,left=250');return false;"><img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21599&amp;ATCH_SN=1"
+							width="258" height="96" alt="스마트 인천공항 비교체험 극과 극 "></a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">3번배너</button>
+					<p>
+						<img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21630&amp;ATCH_SN=1"
+							width="258" height="96" alt="2016년 부처 업무보고">
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">4번배너</button>
+					<p>
+						<a href="https://www.youthhopefund.kr/" target="_blank"
+							title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21393&amp;ATCH_SN=1"
+							width="258" height="96" alt="힘내라 청년들 청년희망펀드">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">5번배너</button>
+					<p>
+						<a href="http://www.k-smile.kr" target="_blank" title="새 창 열림">
+							<img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21478&amp;ATCH_SN=1"
+							width="258" height="96" alt="한국이 웃으면 세계가 웃어요. - 당신의 미소를 기부하세요">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">6번배너</button>
+					<p>
+						<a
+							href="http://www.cyberairport.kr/co/ko/3/6/1/index.jsp?NTT_ID=21323"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21335&amp;ATCH_SN=1"
+							width="258" height="96" alt="항공보안자율신고제도안내.인터넷접수하기">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">7번배너</button>
+					<p>
+						<a
+							href="https://1398.acrc.go.kr/pbp/sr/pblcSttemntStep1.do;jsessionid=1FYMa49QEDBrwBPbvB4SZ00pkUtNOzmqvaD1Z46W5t2a9asHOfLroGcxdAmA8w81.portwas1_servlet_engine5"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21477&amp;ATCH_SN=1"
+							width="258" height="96" alt="권익위원회 공익신고 - 신고상담 : 국번없이 110">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">8번배너</button>
+					<p>
+						<img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21344&amp;ATCH_SN=1"
+							width="258" height="96"
+							alt="2015년도 한국에서 가장 존경받는 기업. all star 9위, 공기업 1위. 8년연속">
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">9번배너</button>
+					<p>
+						<a href="http://www.economy.go.kr/main.do" target="_blank"
+							title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21343&amp;ATCH_SN=1"
+							width="258" height="96" alt="경제혁신.3년의 혁신 30년의성장">
+						</a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">10번배너</button>
+					<p>
+						<a href="http://www.safepeople.go.kr/" target="_blank"
+							title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21346&amp;ATCH_SN=1"
+							width="258" height="96"
+							alt="생활속의 안전을 위협하는 요소 안전신문고를 통해 신고, 건의하세요.">
+						</a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">11번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/4/6/6/index.jsp"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21437&amp;ATCH_SN=1"
+							width="258" height="96"
+							alt="지킬것은 청렴의식, 나눌것은 청렴문화 - 반부패, 청렴활동 자료 공개">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">12번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/2/b/9/index.jsp"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21433&amp;ATCH_SN=1"
+							width="258" height="96" alt="대한민국 청렴 1번지 인천공항 - 수의계약 현황공개">
+						</a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">13번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/2/b/3/index.jsp"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21434&amp;ATCH_SN=1"
+							width="258" height="96" alt="사규공개 및 제/개정예고 - 정관 및 사규공개">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">14번배너</button>
+					<p>
+						<a href="https://1398.acrc.go.kr/pcc/ds/prvnSttemntStepSub1.do"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21342&amp;ATCH_SN=1"
+							width="258" height="96" alt="복지, 보조금 부정행위 신고 신고상담 국번없이 110">
+						</a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">15번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/2/9/2/index.jsp"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21429&amp;ATCH_SN=1"
+							width="258" height="96" alt="하나의 사소한 실수로 부정부패가 시작됩니다. say no!">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">16번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/2/2/d/index.jsp"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21467&amp;ATCH_SN=1"
+							width="258" height="96" alt="업무추진비 공개">
+						</a>
+
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">17번배너</button>
+					<p>
+						<a href="http://www.cyberairport.kr/co/ko/5/5/index.jsp?SN=318"
+							target="_blank" title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21345&amp;ATCH_SN=1"
+							width="258" height="96" alt="인천공항에서는1년365일문화예술이펼쳐집니다">
+						</a>
+					</p>
+				</li>
+				<li style="display: list-item;">
+					<button type="button">18번배너</button>
+					<p>
+						<a href="https://www.jdc-jam.com/main/index.do" target="_blank"
+							title="새 창 열림"> <img
+							src="//airport.kr/co/cmm/bbs/cmmBbsDown.do;FRONT_SESSIONID=XFNAA9A7hzGIQq0gq1r3x54ocezARsdW-lD8EmucuiaOwCv76vC7!-1853690484!2047454509?NTT_ID=21515&amp;ATCH_SN=1"
+							width="258" height="96" alt="제주항공우주박물관-아시아 최대 항공 우주박물관">
+						</a>
+
+					</p>
+				</li>
+
+			</ul>
+		</div>
+		<a href="#none" onclick="return false;" class="more" title="배너광고 더보기"><img
+			src="//airport.kr/images/ko/event/btn_main_more.gif" alt="more"></a>
+	</div>
+</body>
+</html>
