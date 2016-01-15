@@ -33,7 +33,7 @@
 		else if(start && !end)
 			return (start.getTime() <= now.getTime());
 		else if(!start && end)
-			return (now.getTime() >= end.getTime);
+			return (now.getTime() >= end.getTime());
 		return true; 
 	}
 	
