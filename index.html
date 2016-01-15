@@ -79,12 +79,8 @@ float : left;
     </section>
 
     <section class="main-content">
-     <xmp>
-<div> 
-<div>1</div> <div>2</div> <div>3</div> <div data-start="2016-01-20" data-end="2016-01-21 05:00">4</div> <div>5</div>
-<div data-start="2016-01-30">6</div> <div>7</div> <div>8</div> <div>9</div> <div>10</div>
-</div>
-</xmp>
+      
+      <script src="https://gist.github.com/ParkMinKyu/d2b5c36bd9901314ec6d.js"></script>
 
 <div class="page1">
 <div>1</div>
@@ -112,42 +108,7 @@ float : left;
 <div>10</div>
 </div>
 <br/>
-<textarea id="result" style="margin: 0px;height: 500px;width: 650px;clear:both;">
-  //1.기본 사용 (selector된 요소들중 data-start가 있으면 start이후부터 show(), data-end가 있으면 이후부터 remove())
-    $(".page1 > div").niee();
-  
-    //2.적용 할 수 있는 옵션
-    $(".page2 > div").niee({
-      autoLoad : true, // setIntervall로 1초마다 변경사항 확인 default : false
-      time : 2000, //autoLoad = true일때 변경사항 확인할 시간 1000 = 1sec
-      before : function(obj){
-         //날짜 체크 전 시작할 함수 시작전 아래처럼 추가하여 사용 가능
-         $(obj).eq(0).data('start','2016-01-22');
-         $('#result').val($('#result').val() + " \n before obj length : " + $(obj).length);
-         $(obj).each(function(idx, ele){
-            $('#result').val($('#result').val() + " \n before obj " + idx + " start : " + $(ele).data('start') + " ~ end : " + $(ele).data('end'));
-         });
-         $('#result').val($('#result').val() + " \n");
-      },
-      after : function(obj){
-        //날짜 체크 후 시작할 함수
-        $(obj).eq(0).addClass("on");
-        $('#result').val($('#result').val() + " \n after obj length : " + $(obj).length);
-        $(obj).each(function(idx, ele){
-        	$('#result').val($('#result').val() + " \n after obj " + idx + " start : " + $(ele).data('start') + " ~ end : " + $(ele).data('end'));
-         });
-         $('#result').val($('#result').val() + " \n");
-      },
-      change : function(before, after){
-        //변동사항이 일어난 후 처리되는 함수 before : 변동전 선택된 요소들, after : 변동 후 선택된 요소들
-        console.log(before);
-        console.log(after);
-        $('#result').val($('#result').val() + " \n change obj length : " + $(before).length + " -> " + $(after).length );
-        $('#result').val($('#result').val() + " \n");
-      }
-      });
-    });
-</textarea>
+<textarea id="result" style="margin: 0px;height: 500px;width: 650px;clear:both;"></textarea>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/ParkMinKyu/niee">Niee</a> is maintained by <a href="https://github.com/ParkMinKyu">ParkMinKyu</a>.</span>
