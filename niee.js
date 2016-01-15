@@ -14,7 +14,7 @@
 					var sort = $(element).data('sort');
 					for(var i = 0 ; i < $startObj.length ; i ++){
 						if( sort < $startObj.eq(i).data('sort')){
-							$($startObj.eq(i)).before(element);
+							$($startObj.eq(i)).before(element);							
 							break;
 						}
 					}
@@ -29,11 +29,11 @@
 	var isShow = function(start, end){
 		var now = new Date();
 		if(start && end)
-			return (start.getTime() <= now.getTime() && now.getTime() >= end.getTime);
+			return (start.getTime() <= now.getTime() && now.getTime() >= end.getTime());
 		else if(start && !end)
 			return (start.getTime() <= now.getTime());
 		else if(!start && end)
-			return (now.getTime() >= end.getTime());
+			return (end.getTime() >= now.getTime() );
 		return true; 
 	}
 	
