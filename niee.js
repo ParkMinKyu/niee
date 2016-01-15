@@ -5,13 +5,21 @@
 		$( $this ).each(function(idx,element){
 			var start = $(element).data('start') ? new Date($(element).data('start')) : null ;
 			var end = $(element).data('end') ? new Date($(element).data('end')) : null ;
-
+			$(element).data('sort',idx);			
 			if(!isShow(start,end)){
-				$(element).remove();
+				$(element).detach();
 			}else{
-				$(element).show();
-			}
-			
+				if($.inArray(element,$startObj) > -1) $(element).show();
+				else{
+					var sort = $(element).data('sort');
+					for(var i = 0 ; i < $startObj.length ; i ++){
+						if( sort < $startObj.eq(i).data('sort')){
+							$($startObj.eq(i)).before(element);
+							break;
+						}
+					}
+				}
+			}			
 		});
 		var $afterObj = $($this.selector);
 		if( $startObj.length != $afterObj.length )
@@ -30,7 +38,7 @@
 	}
 	
 	$.fn.niee = function(option){
-		if(!option)option={}
+		if(!option)option={};
 		if(option.before)option.before( this );
 		option.this = this;
 		option.autoLoad = option.autoLoad || false;
