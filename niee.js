@@ -15,8 +15,6 @@
 					for(var i = 0 ; i < $startObj.length ; i ++){
 						if( sort < $startObj.eq(i).data('sort')){
 							$($startObj.eq(i)).before(element);
-							console.log(sort);
-							console.log($(element).text());
 							break;
 						}
 					}
