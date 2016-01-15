@@ -43,6 +43,7 @@ before : function(obj){
  $(obj).eq(0).data('start',new Date().getTime() + (1000*10));
  $(obj).eq(1).data('start',new Date().getTime() + (1000*2));
  $(obj).eq(2).data('start',new Date().getTime() + (1000*3));
+ $(obj).eq(4).data('end',new Date().getTime() + (1000*5));
  $('#result').val($('#result').val() + " \n before obj length : " + $(obj).length);
  $(obj).each(function(idx, ele){
 	$('#result').val($('#result').val() + " \n before obj " + idx + " start : " + $(ele).data('start') + " ~ end : " + $(ele).data('end'));
