@@ -30,6 +30,7 @@
 	}
 	
 	$.fn.niee = function(option){
+		if(!option)option={}
 		if(option.before)option.before( this );
 		option.this = this;
 		option.autoLoad = option.autoLoad || false;
