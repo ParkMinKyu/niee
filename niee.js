@@ -16,6 +16,8 @@
 						if( sort < $startObj.eq(i).data('sort')){
 							$($startObj.eq(i)).before(element);							
 							break;
+						}else if( i == $startObj.length - 1 && sort > $startObj.eq(i).data('sort')){
+							$($startObj.eq(i)).after(element);
 						}
 					}
 				}
