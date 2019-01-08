@@ -1,0 +1,8 @@
+title: Niee
+description: jquery, plugin, using date to html element can show or hide
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
